@@ -35,6 +35,7 @@ Tek servis hem statik sayfayı hem API'yi sunar (tek deploy, CORS gerekmez).
 | `lib/src/app.dart` | HTTP rotaları, gövde sınırı, honeypot, rate limit, güvenlik başlıkları |
 | `lib/src/lead_repository.dart` | Postgres erişimi ve tablo şeması |
 | `tool/dev_server.dart` | Yalnızca yerel arayüz geliştirme için bellek içi sunucu |
+| `tool/list_leads.dart` | Veritabanındaki son başvuruları listeler (kalıcılık kontrolü) |
 
 ### Neden bu teknolojiler?
 
@@ -108,6 +109,12 @@ dart run tool/dev_server.dart --fail-db  # her kayıt 500 döner: hata durumunu 
 
 `leads` tablosu sunucu ilk açıldığında `CREATE TABLE IF NOT EXISTS` ile oluşturulur.
 
+Kayıtların gerçekten veritabanında olduğunu görmek için:
+
+```bash
+dart run tool/list_leads.dart      # son 10 başvuru
+```
+
 ## Testler
 
 ```bash
@@ -139,7 +146,7 @@ Elle yapılan uçtan uca kontroller [AI_LOG.md](AI_LOG.md) içinde listelenmişt
 - **Rate limit bellek içi:** Tek sunucu örneği için geçerli, yeniden başlatmada sıfırlanır. Ayrıca `X-Forwarded-For` başlığı istemci tarafından taklit edilebilir. Gerçek üründe Redis gibi paylaşılan bir sayaç ve platformun güvenilir IP başlığı kullanılmalı.
 - **Doğrulama kuralları iki dilde yazılı** (JS ve Dart). Değişiklikte ikisi birlikte güncellenmeli; sunucu asıl yetkidir.
 - **E-posta doğrulaması biçimsel:** Adresin gerçekten var olduğu kontrol edilmez.
-- **Yönetim paneli yok:** Kayıtlar Neon SQL editöründen görüntülenir.
+- **Yönetim paneli yok:** Kayıtlar `tool/list_leads.dart` veya Neon SQL editöründen görüntülenir.
 - **Tarayıcı otomasyon testi yok:** Arayüz akışları elle (tarayıcıda) sınandı; Playwright gibi otomatik bir E2E testi eklenmedi.
 - **KVKK/aydınlatma metni yok:** Kurgusal hizmet olduğu için eklenmedi; gerçek üründe zorunlu.
 
