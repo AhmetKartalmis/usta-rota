@@ -118,9 +118,23 @@ dart test             # 25 geçti, 1 atlandı (TEST_DATABASE_URL yoksa Postgres 
 | Yatay kaydırma (mobil ve masaüstü) | Yok |
 | **Gerçek sunucu + Neon:** tarayıcıdan başvuru | "başvuru no: 2" → `dart run tool/list_leads.dart` ile kayıt Neon'da görüldü, Türkçe karakterler bozulmamış |
 
-### Canlı ortam (Render)
+### Canlı ortam — https://usta-rota.onrender.com (2026-10-10, ~23:57 TSİ)
 
-_Deploy sonrası doldurulacak._
+Deploy sırasında Render'a health check yolunu `/healtz` olarak yazmışım. Render bu adresi beklediği için deploy askıda kaldı. AI log satırından yazım hatasını fark etti, ben de ayarı `/healthz` olarak düzelttim.
+
+| Kontrol | Yöntem | Sonuç |
+|---|---|---|
+| Sağlık | `curl /healthz` | `200` |
+| Güvenlik başlıkları | `curl -I /` | CSP ve `nosniff` mevcut |
+| Sunucu doğrulaması | İstemciyi atlayan `curl` POST: geçersiz alanlar + `service: "x' OR 1=1--"` | `400`, 4 alan hatası |
+| İçerik türü | `text/plain` POST | `415` |
+| Honeypot | `website` dolu POST | `400`, başarı yok |
+| Boş form (tarayıcı, 375 px) | Gönder | 4 alan `aria-invalid` |
+| Geçerli başvuru (tarayıcı, 375 px) | Doldur + gönder | "Gönderiliyor…" → "Başvurunuz alındı (başvuru no: 3)", konsol hatası yok, yatay kaydırma yok |
+| **Kalıcılık** | `dart run tool/list_leads.dart 1` (yerelden Neon'a) | `#3 cilingir Canlı Test Usta <canli@ornek.test>`, Türkçe karakterler doğru |
+| Rate limit (Render proxy'si arkasında) | Aynı IP'den art arda POST | 5'ten sonra `429` + `retry-after: 600` |
+
+Canlıda veritabanı hatası senaryosunu denemedim (üretim veritabanını bilerek bozmak gerekirdi). Bu senaryo otomatik testle (`FailingRepo`) ve yerelde `--fail-db` ile sınandı.
 
 ## Bilinen eksikler
 

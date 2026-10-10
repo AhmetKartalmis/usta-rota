@@ -7,8 +7,8 @@ Form gönderimleri sunucuda
 doğrulanır ve Postgres'e kalıcı olarak yazılır. **Başarı mesajı yalnızca kayıt
 veritabanına yazıldıktan sonra** gösterilir.
 
-- **Canlı adres:** _deploy sonrası eklenecek_
-- **Teslim commit'i:** _teslim anında eklenecek_
+- **Canlı adres:** https://usta-rota.onrender.com
+- **Teslim commit'i:** başvuru platformuna bildirilen commit (son commit'in kimliği o an `git log -1` ile alındı)
 - **AI çalışma kaydı:** [AI_LOG.md](AI_LOG.md)
 
 > Tüm içerik ve test verileri kurgusaldır; ticari kullanım yoktur.
@@ -137,7 +137,7 @@ Elle yapılan uçtan uca kontroller [AI_LOG.md](AI_LOG.md) içinde listelenmişt
 1. Neon'da proje oluşturup bağlantı adresini alın.
 2. Render → New → Web Service → bu repo → Runtime: **Docker**, Instance: Free.
 3. Environment'a `DATABASE_URL` ekleyin. (`PORT` değişkenini Render kendisi verir.)
-4. Health check path: `/healthz`.
+4. Health check path: `/healthz` (ilk denemede `/healtz` yazım hatası deploy'u beklemede bıraktı).
 
 ## Bilinen eksikler
 
