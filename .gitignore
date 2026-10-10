@@ -1,0 +1,5 @@
+.dart_tool/
+.env
+bin/server
+bin/server.exe
+.claude/

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UstaRota — Hizmet verenler için iş bulma platformu</title>
+  <meta name="description" content="UstaRota, tesisatçı, elektrikçi ve diğer hizmet verenleri yakınlarındaki işlere taksi çağırır gibi yönlendiren kurgusal bir aracı platformdur.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231d4ed8'/%3E%3Ccircle cx='16' cy='13' r='5' fill='none' stroke='white' stroke-width='3'/%3E%3Cpath d='M16 18v8' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#basvuru">Başvuru formuna atla</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="UstaRota ana sayfa">
+        <span class="brand-mark" aria-hidden="true"></span>UstaRota
+      </a>
+      <a class="btn btn-small" href="#basvuru">Usta olarak katıl</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Kime, ne vaat ediyoruz -->
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Tesisatçı, elektrikçi, teknisyen ve tüm ustalar için</p>
+        <h1>Müşteri aramayın. Yakınınızdaki işler size gelsin.</h1>
+        <p class="lead">
+          UstaRota, evinde ya da iş yerinde hizmete ihtiyaç duyan kişileri en yakındaki uygun ustaya yönlendirir.
+          Taksi çağırır gibi: talep gelir, telefonunuza bildirim düşer, işi kabul edersiniz.
+          Boş geçen saatler azalır, kazancınız artar.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#basvuru">Hemen başvur</a>
+          <a class="btn btn-ghost" href="#nasil">Nasıl çalışır?</a>
+        </div>
+        <p class="note">Bu sayfa bir iş başvurusu için hazırlanmış <strong>kurgusal</strong> bir hizmettir.</p>
+      </div>
+    </section>
+
+    <!-- 2. Sorun: usta kendini tanısın -->
+    <section class="section" aria-labelledby="sorun-baslik">
+      <div class="container">
+        <h2 id="sorun-baslik">Tanıdık geliyor mu?</h2>
+        <ul class="cards" role="list">
+          <li class="card">
+            <h3>Gün içinde boş saatler</h3>
+            <p>Sabah iki iş var, öğleden sonra hiç yok. Telefonun çalmasını beklemek para kaybettiriyor.</p>
+          </li>
+          <li class="card">
+            <h3>Şehrin öbür ucuna gidilen işler</h3>
+            <p>Yolda geçen bir saat, işin kendisinden uzun sürüyor. Yakındaki müşteriye ise ulaşamıyorsunuz.</p>
+          </li>
+          <li class="card">
+            <h3>Yalnızca tavsiyeyle gelen iş</h3>
+            <p>Yeni müşteri bulmak çevrenize bağlı. İnternette görünmek için zamanınız ve bütçeniz yok.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. Nasıl çalışır: taksi benzetmesi -->
+    <section class="section section-alt" id="nasil" aria-labelledby="nasil-baslik">
+      <div class="container">
+        <h2 id="nasil-baslik">Nasıl çalışır?</h2>
+        <ol class="steps">
+          <li><strong>Başvurun.</strong> Formu doldurun; ekibimiz sizinle iletişime geçip belgelerinizi doğrulasın.</li>
+          <li><strong>Uygulamayı açın, müsait olun.</strong> Çalışmak istediğiniz saatlerde “müsaitim” demeniz yeterli.</li>
+          <li><strong>Yakınınızdaki talebi kabul edin.</strong> Müşteri talep oluşturduğunda en yakın uygun ustaya bildirim gider. İşi görür, kabul eder, yola çıkarsınız.</li>
+          <li><strong>İşi tamamlayın, ödemenizi alın.</strong> Müşteri değerlendirmesi profilinizi güçlendirir, daha çok iş gelir.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4. Hizmetler: formdaki seçeneklerle aynı -->
+    <section class="section" aria-labelledby="hizmet-baslik">
+      <div class="container">
+        <h2 id="hizmet-baslik">Hangi hizmetlerde usta arıyoruz?</h2>
+        <ul class="chips" role="list">
+          <li>Su tesisatı</li>
+          <li>Elektrik</li>
+          <li>Kombi ve klima servisi</li>
+          <li>Beyaz eşya tamiri</li>
+          <li>Boya ve badana</li>
+          <li>Ev ve ofis temizliği</li>
+          <li>Nakliyat</li>
+          <li>Mobilya montajı ve marangozluk</li>
+          <li>Çilingir</li>
+          <li>Bahçe bakımı</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5. Eylem: başvuru formu -->
+    <section class="section section-alt" id="basvuru" aria-labelledby="basvuru-baslik">
+      <div class="container form-wrap">
+        <div class="form-intro">
+          <h2 id="basvuru-baslik">Usta olarak başvurun</h2>
+          <p>Başvurunuzu bırakın, ekibimiz iki iş günü içinde e-posta ile dönüş yapsın. Tüm alanlar zorunludur.</p>
+          <p class="note">Lütfen yalnızca kurgusal test verisi girin.</p>
+        </div>
+
+        <form id="lead-form" class="form" action="/api/leads" method="post" novalidate>
+          <!-- Durum / hata özeti: gönderimde hata varsa odak buraya gelir -->
+          <div id="form-status" class="status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+
+          <div class="field">
+            <label for="name">Ad soyad</label>
+            <input id="name" name="name" type="text" autocomplete="name" required
+                   minlength="2" maxlength="100" aria-describedby="name-error">
+            <p class="error" id="name-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">E-posta</label>
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required
+                   maxlength="254" aria-describedby="email-hint email-error">
+            <p class="hint" id="email-hint">Başvurunuzla ilgili dönüş bu adrese yapılır.</p>
+            <p class="error" id="email-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="service">Hangi hizmeti veriyorsunuz?</label>
+            <select id="service" name="service" required aria-describedby="service-error">
+              <option value="">Seçin…</option>
+              <option value="tesisat">Su tesisatı</option>
+              <option value="elektrik">Elektrik</option>
+              <option value="klima">Kombi ve klima servisi</option>
+              <option value="beyazesya">Beyaz eşya tamiri</option>
+              <option value="boya">Boya ve badana</option>
+              <option value="temizlik">Ev ve ofis temizliği</option>
+              <option value="nakliyat">Nakliyat</option>
+              <option value="montaj">Mobilya montajı ve marangozluk</option>
+              <option value="cilingir">Çilingir</option>
+              <option value="bahce">Bahçe bakımı</option>
+            </select>
+            <p class="error" id="service-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="message">İşinizi kısaca açıklayın</label>
+            <textarea id="message" name="message" rows="4" required minlength="20" maxlength="200"
+                      aria-describedby="message-hint message-error"
+                      placeholder="Ör. 8 yıllık tecrübe, Kadıköy ve çevresinde kombi bakımı ve arıza onarımı."></textarea>
+            <p class="hint" id="message-hint"><span id="message-count">0</span> / 200 karakter, en az 20.</p>
+            <p class="error" id="message-error"></p>
+          </div>
+
+          <!-- Honeypot: ekran dışında, insanlar ve ekran okuyucular için gizli -->
+          <div class="hp" aria-hidden="true">
+            <label for="website">Web siteniz (boş bırakın)</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button class="btn btn-block" type="submit" id="submit-btn">Başvuruyu gönder</button>
+        </form>
+        <noscript><p class="status status-error">Formu göndermek için JavaScript gereklidir.</p></noscript>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 UstaRota — kurgusal hizmet, ticari kullanım yoktur.</p>
+    </div>
+  </footer>
+</body>
+</html>

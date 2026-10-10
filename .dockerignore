@@ -1,0 +1,6 @@
+.dart_tool/
+.git/
+.env
+.claude/
+bin/server
+bin/server.exe
