@@ -10,7 +10,10 @@ Yalnızca gerçekten olanları yazdım. Bulunmayan bir hata uydurmadım.
 |---|---|
 | Platformda çalışmayı başlatma | Daha önce (24 saatlik pencere o an başladı) |
 | Üretime başlama (AI'a ilk mesaj) | 2026-10-10 22:24 (TSİ) |
-| Teslim | _teslimde doldurulacak_ |
+| Canlı doğrulamanın bitişi | 2026-10-10 ~23:57 (TSİ) |
+| Son doküman düzenlemesi ve teslim commit'i | 2026-10-11 12:10 (TSİ) |
+
+İlk mesajla teslim commit'i arasında 13 saat 46 dakika geçti. Kod, test ve canlıya çıkışın tamamı 22:24–23:57 arasında yapıldı (yaklaşık 1,5 saat). Bu oturumda 23:57 ile ertesi gün 12:10 arasında hiç mesaj yok; 12:10'daki iş yalnızca bu dosyaya gerekçe ve süre bilgisini eklemekti.
 
 ## Araçlar
 
@@ -38,7 +41,7 @@ Yalnızca gerçekten olanları yazdım. Bulunmayan bir hata uydurmadım.
 - **Benim sorum:** Flutter'da yetkinim, Flutter Web ile mi yapalım?
 - **AI'ın yanıtı:** Landing page için Flutter Web'i önermedi. Canvas'a çizim yaptığı için erişilebilirliği zayıf, başlangıç paketi büyük, mobilde ilk açılış yavaş ve arama motorları içeriği okuyamıyor. Yerine **düz HTML/CSS/JS ön yüz ve Dart (shelf) backend** önerdi: sunucu ve güvenlik kodu benim bildiğim dilde olsun.
 - **Karar:** Bunu kabul ettim. Bedeli doğrulama kurallarının iki dilde (JS ve Dart) yazılması; bunu README'de bilinen eksik olarak yazdım.
-- _Benim gerekçem: **[KENDİ CÜMLENLE DOLDUR]**_
+- _Benim gerekçem:_ Flutter Web'i başka bir projemde kullandım. O alanda yetkin olduğum için denedim, ancak yüksek performans alamadım. Bu yüzden bu iş için farklı teknolojilerin daha iyi olacağını düşündüm.
 
 ### 2. Konu — kendi fikrime geçtim
 - **AI'ın ilk önerisi ve ilk uygulama:** KOBİ'ler için görev otomasyonu ("Akışkan"). Sayfa ve backend bu konuyla yazılıp test edildi.
